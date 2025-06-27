@@ -10,9 +10,11 @@
             background-image: url('https://source.unsplash.com/random/1920x1080/?office-equipment');
             background-size: cover;
             background-position: center;
+            height: 100vh;
         }
         .navbar {
             transition: background-color 0.3s ease;
+            z-index: 50;
         }
         .navbar.scrolled {
             background-color: rgba(0, 0, 0, 0.8);
@@ -27,15 +29,72 @@
             position: fixed;
             top: 10px;
             left: 20px;
-            height: 50px;
+            height: 40px;
             z-index: 50;
         }
         .logo-center {
-            position: absolute;
-            top: 25%; /* Adjusted to 25% to raise the logo further upward, keeping size consistent */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 100px; /* Reverted to original height to avoid size increase */
+            position: relative; /* Changed from absolute to stack vertically */
+            height: 100px;
+            margin-bottom: 20px; /* Space between logo and name */
+        }
+        @media (max-width: 640px) { /* sm breakpoint */
+            .logo-center {
+                height: 80px; /* Smaller logo on mobile */
+                margin-bottom: 10px; /* Reduced space on mobile */
+            }
+            .logo-fixed {
+                height: 30px; /* Smaller fixed logo on mobile */
+            }
+            #heroName {
+                font-size: 1.5rem; /* Reduce hero name size on mobile */
+            }
+            .navbar .space-x-4 {
+                display: none; /* Hide nav links on mobile by default */
+            }
+            .navbar.scrolled .space-x-4 {
+                display: flex; /* Show nav links when scrolled on mobile */
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.9);
+                width: 100%;
+                padding: 10px;
+            }
+            #getInTouch {
+                font-size: 0.9rem; /* Smaller button text on mobile */
+                padding: 4px 8px;
+            }
+            .grid-cols-1.md:grid-cols-3 {
+                grid-template-columns: 1fr; /* Stack services on mobile */
+            }
+            .grid-cols-1.md:grid-cols-4 {
+                grid-template-columns: 1fr; /* Stack products on mobile */
+            }
+            .text-3xl {
+                font-size: 1.5rem; /* Reduce section headings on mobile */
+            }
+            .text-xl.md:text-2xl {
+                font-size: 1rem; /* Reduce text size on mobile */
+            }
+        }
+        @media (min-width: 641px) and (max-width: 1024px) { /* md breakpoint */
+            .logo-center {
+                height: 90px; /* Medium-sized logo on tablet */
+                margin-bottom: 15px; /* Adjusted space on tablet */
+            }
+            .logo-fixed {
+                height: 35px; /* Medium-sized fixed logo on tablet */
+            }
+            #heroName {
+                font-size: 2.5rem; /* Adjust hero name for tablet */
+            }
+            .grid-cols-1.md:grid-cols-3 {
+                grid-template-columns: 1fr 1fr; /* Two columns on tablet */
+            }
+            .grid-cols-1.md:grid-cols-4 {
+                grid-template-columns: 1fr 1fr; /* Two columns on tablet */
+            }
         }
     </style>
 </head>
@@ -54,9 +113,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg h-screen flex flex-col items-center justify-center text-white">
-        <div class="text-center bg-black bg-opacity-50 p-8 rounded">
-            <img id="heroLogo" src="PNG LOGO-01.png" alt="SR Tech Vision Logo" class="logo-transition mx-auto h-24 mb-4 logo-center">
+    <section id="home" class="hero-bg flex flex-col items-center justify-center text-white">
+        <div class="text-center bg-black bg-opacity-50 p-8 rounded flex flex-col items-center">
+            <img id="heroLogo" src="PNG LOGO-01.png" alt="SR Tech Vision Logo" class="logo-transition mx-auto logo-center">
             <h2 id="heroName" class="text-4xl md:text-6xl font-bold mb-4 name-transition">SR TECH VISION COMPUTER TRADING LLC</h2>
             <p class="text-xl md:text-2xl mb-6">Your One-Stop Solution for Copiers, Printers, and Office Equipment</p>
             <a href="#contact" id="getInTouch" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Get in Touch</a>
@@ -120,8 +179,8 @@
             <div class="max-w-lg mx-auto">
                 <p class="text-center mb-4">Reach out to us for inquiries or support!</p>
                 <p class="text-center mb-4">Email: info@srtechvision.com</p>
-                <p class="text-center mb-4">Phone: +971-559-113-259</p> <!-- Updated mobile number -->
-                <p class="text-center">Address: SR Tech Vision Computer Trading LLC, Deira - Dubai</p> <!-- Updated address -->
+                <p class="text-center mb-4">Phone: +971-559-113-259</p>
+                <p class="text-center">Address: SR Tech Vision Computer Trading LLC, Deira - Dubai</p>
             </div>
         </div>
     </section>
