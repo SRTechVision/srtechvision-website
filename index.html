@@ -28,31 +28,40 @@
         .logo-fixed {
             position: fixed;
             top: 10px;
-            left: 20px;
+            left: 30px; /* Increased from 20px to prevent overlap */
             height: 40px;
             z-index: 50;
         }
         .logo-center {
-            position: relative; /* Changed from absolute to stack vertically */
+            position: relative;
             height: 100px;
-            margin-bottom: 20px; /* Space between logo and name */
+            margin-bottom: 20px;
+        }
+        .content-wrapper {
+            margin-left: 80px; /* Padding to avoid overlap with fixed logo */
+            padding-top: 60px; /* Space for navbar and logo */
         }
         @media (max-width: 640px) { /* sm breakpoint */
             .logo-center {
-                height: 80px; /* Smaller logo on mobile */
-                margin-bottom: 10px; /* Reduced space on mobile */
+                height: 80px;
+                margin-bottom: 10px;
             }
             .logo-fixed {
-                height: 30px; /* Smaller fixed logo on mobile */
+                height: 30px;
+                left: 10px; /* Adjusted for mobile */
+            }
+            .content-wrapper {
+                margin-left: 50px; /* Reduced margin for mobile */
+                padding-top: 50px;
             }
             #heroName {
-                font-size: 1.5rem; /* Reduce hero name size on mobile */
+                font-size: 1.5rem;
             }
             .navbar .space-x-4 {
-                display: none; /* Hide nav links on mobile by default */
+                display: none;
             }
             .navbar.scrolled .space-x-4 {
-                display: flex; /* Show nav links when scrolled on mobile */
+                display: flex;
                 flex-direction: column;
                 position: absolute;
                 top: 60px;
@@ -62,38 +71,43 @@
                 padding: 10px;
             }
             #getInTouch {
-                font-size: 0.9rem; /* Smaller button text on mobile */
+                font-size: 0.9rem;
                 padding: 4px 8px;
             }
             .grid-cols-1.md:grid-cols-3 {
-                grid-template-columns: 1fr; /* Stack services on mobile */
+                grid-template-columns: 1fr;
             }
             .grid-cols-1.md:grid-cols-4 {
-                grid-template-columns: 1fr; /* Stack products on mobile */
+                grid-template-columns: 1fr;
             }
             .text-3xl {
-                font-size: 1.5rem; /* Reduce section headings on mobile */
+                font-size: 1.5rem;
             }
             .text-xl.md:text-2xl {
-                font-size: 1rem; /* Reduce text size on mobile */
+                font-size: 1rem;
             }
         }
         @media (min-width: 641px) and (max-width: 1024px) { /* md breakpoint */
             .logo-center {
-                height: 90px; /* Medium-sized logo on tablet */
-                margin-bottom: 15px; /* Adjusted space on tablet */
+                height: 90px;
+                margin-bottom: 15px;
             }
             .logo-fixed {
-                height: 35px; /* Medium-sized fixed logo on tablet */
+                height: 35px;
+                left: 20px; /* Adjusted for tablet */
+            }
+            .content-wrapper {
+                margin-left: 70px; /* Adjusted margin for tablet */
+                padding-top: 55px;
             }
             #heroName {
-                font-size: 2.5rem; /* Adjust hero name for tablet */
+                font-size: 2.5rem;
             }
             .grid-cols-1.md:grid-cols-3 {
-                grid-template-columns: 1fr 1fr; /* Two columns on tablet */
+                grid-template-columns: 1fr 1fr;
             }
             .grid-cols-1.md:grid-cols-4 {
-                grid-template-columns: 1fr 1fr; /* Two columns on tablet */
+                grid-template-columns: 1fr 1fr;
             }
         }
     </style>
@@ -124,7 +138,7 @@
 
     <!-- Services Section -->
     <section id="services" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
+        <div class="content-wrapper">
             <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded shadow">
@@ -145,7 +159,7 @@
 
     <!-- Products Section -->
     <section id="products" class="py-16">
-        <div class="container mx-auto px-4">
+        <div class="content-wrapper">
             <h2 class="text-3xl font-bold text-center mb-8">Our Products</h2>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="bg-gray-100 p-6 rounded shadow text-center">
@@ -174,7 +188,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-gray-800 text-white">
-        <div class="container mx-auto px-4">
+        <div class="content-wrapper">
             <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
             <div class="max-w-lg mx-auto">
                 <p class="text-center mb-4">Reach out to us for inquiries or support!</p>
