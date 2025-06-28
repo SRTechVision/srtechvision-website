@@ -1,80 +1,253 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #5992a043; /* Match hero background color */
 }
+
+/* Header Styles */
 header {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
 }
+
 .logo {
     max-width: 150px;
 }
+
+/* Navigation Styles */
 nav ul {
     list-style-type: none;
     padding: 0;
     background-color: #444;
     overflow: hidden;
 }
+
 nav ul li {
     display: inline;
     margin-right: 10px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
 }
+
 nav ul li a:hover {
     color: #ddd;
 }
+
+/* Section Styles */
 section {
     padding: 20px;
     margin: 10px;
     background-color: #f9f9f9;
 }
+
+/* Hero Background Styles */
+.hero-bg {
+    background-image: url('Untitled design.png');
+    background-size: cover; /* Changed to cover to expand and fill screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%; /* Ensure full width */
+}
+
+/* Product List Styles */
 .product-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
+
 .product {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
 }
+
+/* Button Styles */
 button {
-    background-color: #4CAF50;
+    background-color: #2563eb;
     color: white;
     padding: 5px 10px;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 button:hover {
-    background-color: #45a049;
+    background-color: #1d4ed8;
 }
+
+/* Form Styles */
 form {
     max-width: 400px;
     margin: 0 auto;
 }
+
 label {
     display: block;
     margin-top: 10px;
 }
-input, textarea {
+
+input,
+textarea {
     width: 100%;
     padding: 5px;
     margin-top: 5px;
 }
+
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: white;
-    position: fixed;
+    position: relative;
     width: 100%;
-    bottom: 0;
+    /* Optional: Uncomment for fixed footer if needed */
+    /* position: fixed;
+    bottom: 0; */
+}
+
+/* Navigation and Logo Styles */
+.navbar {
+    transition: background-color 0.3s ease;
+    z-index: 50;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo-transition {
+    transition: all 0.5s ease;
+    filter: brightness(1.1) sepia(0.8) saturate(4) hue-rotate(10deg); /* Gold effect */
+}
+
+.name-transition {
+    transition: all 0.5s ease;
+}
+
+.logo-fixed {
+    position: fixed;
+    top: 10px;
+    left: 30px;
+    height: 40px;
+    z-index: 50;
+}
+
+.logo-center {
+    position: relative;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.content-wrapper {
+    margin-left: 80px;
+    padding-top: 60px;
+}
+
+.hero-content {
+    transform: translateY(-40px);
+}
+
+.navbar.scrolled .logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.navbar.scrolled #headerName {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#heroName {
+    background: linear-gradient(45deg, #b8860b, #ffd700, #d4af37, #b8860b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 2s infinite linear;
+    background-size: 300% 300%;
+}
+
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Button Hover Fix */
+#getInTouch {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#getInTouch:hover {
+    background-color: #2d3748; /* Darker gray-blue */
+    color: white;
+}
+
+/* Enquiry Form Styles */
+#enquiryForm {
+    display: none;
+}
+
+#enquiryForm .bg-white {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 28rem;
+    width: 100%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+    #menuToggle {
+        display: block;
+    }
+    #navLinks {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+    }
+    #navLinks.active {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-center { height: 80px; margin-bottom: 10px; }
+    .logo-fixed { height: 30px; left: 10px; }
+    .content-wrapper { margin-left: 50px; padding-top: 50px; }
+    #heroName { font-size: 1.5rem; }
+    #getInTouch { font-size: 0.9rem; padding: 4px 8px; }
+    .grid-cols-1.md\:grid-cols-3,
+    .grid-cols-1.md\:grid-cols-4 { grid-template-columns: 1fr; }
+    .text-3xl { font-size: 1.5rem; }
+    .text-xl.md\:text-2xl { font-size: 1rem; }
+    .hero-bg {
+        background-size: cover; /* Reinforce cover for mobile */
+        min-height: 100vh; /* Ensure minimum height */
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .logo-center { height: 90px; margin-bottom: 15px; }
+    .logo-fixed { height: 35px; left: 20px; }
+    .content-wrapper { margin-left: 70px; padding-top: 55px; }
+    #heroName { font-size: 2.5rem; }
+    .grid-cols-1.md\:grid-cols-3 { grid-template-columns: 1fr 1fr; }
+    .grid-cols-1.md\:grid-cols-4 { grid-template-columns: 1fr 1fr; }
 }
