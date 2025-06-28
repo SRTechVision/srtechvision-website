@@ -1,269 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SR TECH VISION COMPUTER TRADING LLC</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/random/1920x1080/?office-equipment');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-        }
-        .navbar {
-            transition: background-color 0.3s ease;
-            z-index: 50;
-        }
-        .navbar.scrolled {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        .logo-transition {
-            transition: all 0.5s ease;
-        }
-        .name-transition {
-            transition: all 0.5s ease;
-        }
-        .logo-fixed {
-            position: fixed;
-            top: 10px;
-            left: 30px; /* Increased from 20px to prevent overlap */
-            height: 40px;
-            z-index: 50;
-        }
-        .logo-center {
-            position: relative;
-            height: 100px;
-            margin-bottom: 20px;
-        }
-        .content-wrapper {
-            margin-left: 80px; /* Padding to avoid overlap with fixed logo */
-            padding-top: 60px; /* Space for navbar and logo */
-        }
-        @media (max-width: 640px) { /* sm breakpoint */
-            .logo-center {
-                height: 80px;
-                margin-bottom: 10px;
-            }
-            .logo-fixed {
-                height: 30px;
-                left: 10px; /* Adjusted for mobile */
-            }
-            .content-wrapper {
-                margin-left: 50px; /* Reduced margin for mobile */
-                padding-top: 50px;
-            }
-            #heroName {
-                font-size: 1.5rem;
-            }
-            .navbar .space-x-4 {
-                display: none;
-            }
-            .navbar.scrolled .space-x-4 {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                background-color: rgba(0, 0, 0, 0.9);
-                width: 100%;
-                padding: 10px;
-            }
-            #getInTouch {
-                font-size: 0.9rem;
-                padding: 4px 8px;
-            }
-            .grid-cols-1.md:grid-cols-3 {
-                grid-template-columns: 1fr;
-            }
-            .grid-cols-1.md:grid-cols-4 {
-                grid-template-columns: 1fr;
-            }
-            .text-3xl {
-                font-size: 1.5rem;
-            }
-            .text-xl.md:text-2xl {
-                font-size: 1rem;
-            }
-        }
-        @media (min-width: 641px) and (max-width: 1024px) { /* md breakpoint */
-            .logo-center {
-                height: 90px;
-                margin-bottom: 15px;
-            }
-            .logo-fixed {
-                height: 35px;
-                left: 20px; /* Adjusted for tablet */
-            }
-            .content-wrapper {
-                margin-left: 70px; /* Adjusted margin for tablet */
-                padding-top: 55px;
-            }
-            #heroName {
-                font-size: 2.5rem;
-            }
-            .grid-cols-1.md:grid-cols-3 {
-                grid-template-columns: 1fr 1fr;
-            }
-            .grid-cols-1.md:grid-cols-4 {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SR TECH VISION COMPUTER TRADING LLC</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+    .hero-bg {
+      background-image: url('Untitled design.png');
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+    .navbar {
+      transition: background-color 0.3s ease;
+      z-index: 50;
+    }
+    .navbar.scrolled {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .logo-transition {
+      transition: all 0.5s ease;
+      filter: brightness(1.1) sepia(0.8) saturate(4) hue-rotate(10deg); /* Gold effect */
+    }
+    .name-transition {
+      transition: all 0.5s ease;
+    }
+    .logo-fixed {
+      position: fixed;
+      top: 10px;
+      left: 30px;
+      height: 40px;
+      z-index: 50;
+    }
+    .logo-center {
+      position: relative;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    .content-wrapper {
+      margin-left: 80px;
+      padding-top: 60px;
+    }
+    .hero-content {
+      transform: translateY(-40px);
+    }
+    .navbar.scrolled .logo-container {
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+    }
+    .navbar.scrolled #headerName {
+      margin-left: 10px;
+      font-size: 1.5rem;
+      color: white;
+    }
+    #heroName {
+      background: linear-gradient(45deg, #b8860b, #ffd700, #d4af37, #b8860b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: shine 2s infinite linear;
+      background-size: 300% 300%;
+    }
+    @keyframes shine {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @media (max-width: 640px) {
+      .logo-center { height: 80px; margin-bottom: 10px; }
+      .logo-fixed { height: 30px; left: 10px; }
+      .content-wrapper { margin-left: 50px; padding-top: 50px; }
+      #heroName { font-size: 1.5rem; }
+      .navbar .space-x-4 { display: none; }
+      .navbar.scrolled .space-x-4 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 10px;
+      }
+      #getInTouch { font-size: 0.9rem; padding: 4px 8px; }
+      .grid-cols-1.md\:grid-cols-3,
+      .grid-cols-1.md\:grid-cols-4 { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .logo-center { height: 90px; margin-bottom: 15px; }
+      .logo-fixed { height: 35px; left: 20px; }
+      .content-wrapper { margin-left: 70px; padding-top: 55px; }
+      #heroName { font-size: 2.5rem; }
+      .grid-cols-1.md\:grid-cols-3 { grid-template-columns: 1fr 1fr; }
+      .grid-cols-1.md\:grid-cols-4 { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body class="font-sans">
-    <!-- Navigation Bar -->
-    <nav class="navbar fixed top-0 w-full text-white py-4 z-50">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div id="headerName" class="hidden text-2xl font-bold"></div>
-            <div class="space-x-4">
-                <a href="#home" class="hover:text-gray-300">Home</a>
-                <a href="#services" class="hover:text-gray-300">Services</a>
-                <a href="#products" class="hover:text-gray-300">Products</a>
-                <a href="#contact" class="hover:text-gray-300">Contact</a>
+
+<!-- Navigation Bar -->
+<nav class="navbar fixed top-0 w-full text-white py-4 z-50">
+  <div class="container mx-auto flex justify-between items-center px-4">
+    <div class="logo-container hidden" id="navbarLogoContainer">
+      <div id="headerName" class="hidden text-2xl font-bold"></div>
+    </div>
+    <div class="space-x-4">
+      <a href="#home" class="hover:text-gray-300">Home</a>
+      <a href="#services" class="hover:text-gray-300">Services</a>
+      <a href="#products" class="hover:text-gray-300">Products</a>
+      <a href="#about-us" class="hover:text-gray-300">About Us</a>
+      <a href="#contact" class="hover:text-gray-300">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-bg flex flex-col items-center justify-center text-white">
+  <div class="text-center p-8 rounded flex flex-col items-center hero-content">
+    <!-- LOGO - ABOVE TEXT -->
+    <img id="heroLogo" src="PNG LOGO-01.png" alt="SR Tech Vision Logo" class="logo-transition mx-auto logo-center mb-6">
+
+    <!-- COMPANY NAME -->
+    <h2 id="heroName" class="text-4xl md:text-6xl font-bold mb-4 name-transition">
+      SR TECH VISION COMPUTER TRADING LLC
+    </h2>
+
+    <!-- TAGLINE -->
+    <p class="text-xl md:text-2xl mb-6 text-black">
+      Your One-Stop Solution for Copiers, Printers, and Office Equipment
+    </p>
+
+    <!-- CTA BUTTON -->
+    <a href="#contact" id="getInTouch" class="bg-white text-black px-6 py-3 rounded hover:bg-black hover:text-white">
+      Get in Touch
+    </a>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-16 bg-gray-100">
+  <div class="content-wrapper">
+    <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold mb-4">Copier & Printer Services</h3>
+        <p>Sales, repair, and maintenance of brand new and used copier machines and printers.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold mb-4">Computer Sales & Repair</h3>
+        <p>High-quality computer sales, repair, and upgrade services for businesses and individuals.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold mb-4">Office Supplies</h3>
+        <p>Toner cartridges, printer spare parts, computer accessories, and a wide range of office supplies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="py-16">
+  <div class="content-wrapper">
+    <h2 class="text-3xl font-bold text-center mb-8">Our Products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="bg-gray-100 p-6 rounded shadow text-center">
+        <img src="https://source.unsplash.com/random/300x200/?copier" alt="Copier Machine" class="mb-4 rounded">
+        <h3 class="text-lg font-semibold">Copier Machines</h3>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2" onclick="openEnquiry('Copier Machines')">Enquire Price</button>
+      </div>
+      <div class="bg-gray-100 p-6 rounded shadow text-center">
+        <img src="https://source.unsplash.com/random/300x200/?printer" alt="Printer" class="mb-4 rounded">
+        <h3 class="text-lg font-semibold">Printers</h3>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2" onclick="openEnquiry('Printers')">Enquire Price</button>
+      </div>
+      <div class="bg-gray-100 p-6 rounded shadow text-center">
+        <img src="https://source.unsplash.com/random/300x200/?scanner" alt="Scanner" class="mb-4 rounded">
+        <h3 class="text-lg font-semibold">Scanners</h3>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2" onclick="openEnquiry('Scanners')">Enquire Price</button>
+      </div>
+      <div class="bg-gray-100 p-6 rounded shadow text-center">
+        <img src="https://source.unsplash.com/random/300x200/?toner" alt="Toner Cartridges" class="mb-4 rounded">
+        <h3 class="text-lg font-semibold">Toner Cartridges</h3>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2" onclick="openEnquiry('Toner Cartridges')">Enquire Price</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us Section (Moved Up) -->
+<section id="about-us" class="py-16 bg-gray-200">
+  <div class="content-wrapper">
+    <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+    <div class="max-w-3xl mx-auto px-4">
+                <p class="text-lg text-justify mb-6">At SR Tech Vision Computer Trading LLC, we bring over 4 years of unparalleled expertise in the UAE market, specializing in computers, copiers, printers, and office equipment. Our dedicated team has successfully served more than 10,000 customers across the UAE, earning their trust through exceptional service and quality products.</p>
+                <p class="text-lg text-justify mb-6">We proudly hold the position as the No. 1 leader in exports and imports of computer systems, copier machines, printers, and related accessories, catering to both local businesses and international markets. Our state-of-the-art facilities in Deira, Dubai, enable us to offer cutting-edge solutions, including customized IT setups, bulk procurement, and rapid repair services.</p>
+                <p class="text-lg text-justify mb-6">With a commitment to innovation, we continuously expand our product range, including high-performance scanners, toner cartridges, and office supplies, ensuring we meet the evolving needs of our clients. Our certified technicians and strategic partnerships with leading global brands guarantee reliability and satisfaction for every customer.</p>
             </div>
-        </div>
-    </nav>
+  </div>
+</section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg flex flex-col items-center justify-center text-white">
-        <div class="text-center bg-black bg-opacity-50 p-8 rounded flex flex-col items-center">
-            <img id="heroLogo" src="PNG LOGO-01.png" alt="SR Tech Vision Logo" class="logo-transition mx-auto logo-center">
-            <h2 id="heroName" class="text-4xl md:text-6xl font-bold mb-4 name-transition">SR TECH VISION COMPUTER TRADING LLC</h2>
-            <p class="text-xl md:text-2xl mb-6">Your One-Stop Solution for Copiers, Printers, and Office Equipment</p>
-            <a href="#contact" id="getInTouch" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Get in Touch</a>
-        </div>
-    </section>
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-800 text-white">
+  <div class="content-wrapper">
+    <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+    <div class="max-w-lg mx-auto">
+      <p class="text-center mb-4">Reach out to us for inquiries or support!</p>
+      <p class="text-center mb-4">Email: info@srtechvision.com</p>
+      <p class="text-center mb-4">Phone: +971-559-113-259</p>
+      <p class="text-center">Address: SR Tech Vision Computer Trading LLC, Deira - Dubai</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-gray-100">
-        <div class="content-wrapper">
-            <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="text-xl font-semibold mb-4">Copier & Printer Services</h3>
-                    <p>Sales, repair, and maintenance of brand new and used copier machines and printers.</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="text-xl font-semibold mb-4">Computer Sales & Repair</h3>
-                    <p>High-quality computer sales, repair, and upgrade services for businesses and individuals.</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="text-xl font-semibold mb-4">Office Supplies</h3>
-                    <p>Toner cartridges, printer spare parts, computer accessories, and a wide range of office supplies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Footer -->
+<footer class="bg-black text-white py-4 text-center">
+  <p>© 2025 SR TECH VISION COMPUTER TRADING LLC. All rights reserved.</p>
+</footer>
 
-    <!-- Products Section -->
-    <section id="products" class="py-16">
-        <div class="content-wrapper">
-            <h2 class="text-3xl font-bold text-center mb-8">Our Products</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="bg-gray-100 p-6 rounded shadow text-center">
-                    <img src="https://source.unsplash.com/random/300x200/?copier" alt="Copier Machine" class="mb-4 rounded">
-                    <h3 class="text-lg font-semibold">Copier Machines</h3>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2" onclick="openEnquiry('Copier Machines')">Enquire Price</button>
-                </div>
-                <div class="bg-gray-100 p-6 rounded shadow text-center">
-                    <img src="https://source.unsplash.com/random/300x200/?printer" alt="Printer" class="mb-4 rounded">
-                    <h3 class="text-lg font-semibold">Printers</h3>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2" onclick="openEnquiry('Printers')">Enquire Price</button>
-                </div>
-                <div class="bg-gray-100 p-6 rounded shadow text-center">
-                    <img src="https://source.unsplash.com/random/300x200/?scanner" alt="Scanner" class="mb-4 rounded">
-                    <h3 class="text-lg font-semibold">Scanners</h3>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2" onclick="openEnquiry('Scanners')">Enquire Price</button>
-                </div>
-                <div class="bg-gray-100 p-6 rounded shadow text-center">
-                    <img src="https://source.unsplash.com/random/300x200/?toner" alt="Toner Cartridges" class="mb-4 rounded">
-                    <h3 class="text-lg font-semibold">Toner Cartridges</h3>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2" onclick="openEnquiry('Toner Cartridges')">Enquire Price</button>
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    const heroLogo = document.getElementById('heroLogo');
+    const heroName = document.getElementById('heroName');
+    const headerName = document.getElementById('headerName');
+    const navbarLogoContainer = document.getElementById('navbarLogoContainer');
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-800 text-white">
-        <div class="content-wrapper">
-            <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
-            <div class="max-w-lg mx-auto">
-                <p class="text-center mb-4">Reach out to us for inquiries or support!</p>
-                <p class="text-center mb-4">Email: info@srtechvision.com</p>
-                <p class="text-center mb-4">Phone: +971-559-113-259</p>
-                <p class="text-center">Address: SR Tech Vision Computer Trading LLC, Deira - Dubai</p>
-            </div>
-        </div>
-    </section>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+        heroLogo.classList.remove('logo-center');
+        heroLogo.classList.add('logo-fixed');
+        heroName.style.opacity = '0';
+        heroName.style.height = '0';
+        headerName.textContent = heroName.textContent;
+        headerName.classList.remove('hidden');
+        navbarLogoContainer.classList.remove('hidden');
+        navbarLogoContainer.insertBefore(heroLogo, headerName);
+      } else {
+        navbar.classList.remove('scrolled');
+        heroLogo.classList.remove('logo-fixed');
+        heroLogo.classList.add('logo-center');
+        heroName.style.opacity = '1';
+        heroName.style.height = 'auto';
+        headerName.classList.add('hidden');
+        navbarLogoContainer.classList.add('hidden');
+        const heroContent = document.querySelector('#home .hero-content');
+        heroContent.insertBefore(heroLogo, heroContent.firstChild);
+      }
+    });
 
-    <!-- Footer -->
-    <footer class="bg-black text-white py-4 text-center">
-        <p>© 2025 SR TECH VISION COMPUTER TRADING LLC. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Ensure DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            const navbar = document.querySelector('.navbar');
-            const heroLogo = document.getElementById('heroLogo');
-            const heroName = document.getElementById('heroName');
-            const headerName = document.getElementById('headerName');
-
-            // Navbar scroll effect
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                    heroLogo.classList.remove('logo-center');
-                    heroLogo.classList.add('logo-fixed');
-                    heroName.style.opacity = '0';
-                    heroName.style.height = '0';
-                    headerName.textContent = heroName.textContent;
-                    headerName.classList.remove('hidden');
-                } else {
-                    navbar.classList.remove('scrolled');
-                    heroLogo.classList.remove('logo-fixed');
-                    heroLogo.classList.add('logo-center');
-                    heroName.style.opacity = '1';
-                    heroName.style.height = 'auto';
-                    headerName.classList.add('hidden');
-                }
-            });
-
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-            // Enquiry form functionality
-            function openEnquiry(product) {
-                const name = prompt(`Enter your name for ${product} price enquiry:`);
-                const email = prompt('Enter your email:');
-                const message = prompt('Enter any additional message (optional):');
-                if (name && email) {
-                    alert(`Enquiry submitted for ${product}\nName: ${name}\nEmail: ${email}\nMessage: ${message || 'None'}`);
-                }
-            }
-
-            // Get in Touch click handler
-            document.getElementById('getInTouch').addEventListener('click', function(e) {
-                e.preventDefault();
-                heroLogo.classList.remove('logo-center');
-                heroLogo.classList.add('logo-fixed');
-                heroName.style.opacity = '0';
-                heroName.style.height = '0';
-                headerName.textContent = heroName.textContent;
-                headerName.classList.remove('hidden');
-                document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-            });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
-    </script>
+      });
+    });
+
+    window.openEnquiry = function(product) {
+      const name = prompt(`Enter your name for ${product} price enquiry:`);
+      const email = prompt('Enter your email:');
+      const message = prompt('Enter any additional message (optional):');
+      if (name && email) {
+        alert(`Enquiry submitted for ${product}\nName: ${name}\nEmail: ${email}\nMessage: ${message || 'None'}`);
+      }
+    };
+
+    document.getElementById('getInTouch').addEventListener('click', function(e) {
+      e.preventDefault();
+      heroLogo.classList.remove('logo-center');
+      heroLogo.classList.add('logo-fixed');
+      heroName.style.opacity = '0';
+      heroName.style.height = '0';
+      headerName.textContent = heroName.textContent;
+      headerName.classList.remove('hidden');
+      navbarLogoContainer.classList.remove('hidden');
+      navbarLogoContainer.insertBefore(heroLogo, headerName);
+      document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
 </body>
 </html>
